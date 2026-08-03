@@ -1,0 +1,168 @@
+{
+  "generated": "2026-01-15",
+  "mailbox": "you@example.com",
+  "scope": "SAMPLE DATA. Every company, finding and email address below is fictional. This file ships so the UI has something to render before your first sync. Run gmail_sync.py to replace it with your real submissions.",
+  "statusVocab": {
+    "awaiting": "Sent. No response of any kind.",
+    "acked": "Automated acknowledgement only. No human has engaged.",
+    "in_progress": "A human confirmed they are looking at it.",
+    "needs_action": "Blocked on YOU, not on them.",
+    "accepted": "Validated as a real finding.",
+    "paid": "Bounty received.",
+    "rejected": "Closed. Not accepted.",
+    "duplicate": "Closed as a duplicate."
+  },
+  "programs": [
+    {
+      "id": "northwind",
+      "name": "Northwind Cloud",
+      "platform": "Direct / VDP",
+      "contact": "security@northwind.example",
+      "note": "Two reports, no human contact on either. This is what a program going dark looks like.",
+      "reports": [
+        {
+          "id": "northwind-1",
+          "title": "Cross-tenant object read via predictable bucket keys",
+          "detail": "GET /v2/objects/{key} accepts a key from another tenant's namespace without an ownership check.",
+          "sent": "2025-11-20",
+          "status": "awaiting",
+          "severity": "high",
+          "threadId": "",
+          "events": [
+            { "date": "2025-11-20", "by": "you", "what": "Report sent" },
+            { "date": "2025-12-04", "by": "you", "what": "Follow-up sent — no reply" }
+          ]
+        },
+        {
+          "id": "northwind-2",
+          "title": "Signed URL expiry not enforced server-side",
+          "detail": "Expired signatures are still accepted by the storage edge for roughly 24h after expiry.",
+          "sent": "2025-11-28",
+          "status": "awaiting",
+          "severity": "medium",
+          "threadId": "",
+          "events": [
+            { "date": "2025-11-28", "by": "you", "what": "Report sent" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contoso",
+      "name": "Contoso Pay",
+      "platform": "Bug bounty",
+      "contact": "bounty@contoso.example",
+      "note": "The happy path: fast triage, valid finding, paid.",
+      "reports": [
+        {
+          "id": "contoso-1",
+          "title": "postMessage handler accepts any origin in the checkout widget",
+          "detail": "The embedded checkout registers a message listener with no event.origin validation, so any embedding page can drive it.",
+          "sent": "2025-12-18",
+          "status": "paid",
+          "severity": "high",
+          "bounty": "$750 USD",
+          "threadId": "",
+          "events": [
+            { "date": "2025-12-18", "by": "you", "what": "Report sent" },
+            { "date": "2025-12-19", "by": "them", "what": "Confirmed valid, reward offered, invoice requested" },
+            { "date": "2025-12-19", "by": "you", "what": "Invoice sent" },
+            { "date": "2026-01-06", "by": "them", "what": "Payment sent" }
+          ]
+        },
+        {
+          "id": "contoso-2",
+          "title": "Rate limit bypass on the refund endpoint via header casing",
+          "detail": "Alternate casing of the idempotency header skips the throttle bucket.",
+          "sent": "2026-01-02",
+          "status": "in_progress",
+          "severity": "medium",
+          "threadId": "",
+          "events": [
+            { "date": "2026-01-02", "by": "you", "what": "Report sent" },
+            { "date": "2026-01-05", "by": "them", "what": "Reproduced, fix in progress, will confirm when shipped" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fabrikam",
+      "name": "Fabrikam ID",
+      "platform": "Responsible Disclosure",
+      "contact": "disclosure@fabrikam.example",
+      "note": "Robot answered, human never did. 'acked' is not the same as triaged.",
+      "reports": [
+        {
+          "id": "fabrikam-1",
+          "title": "Account enumeration on the password reset form",
+          "detail": "Distinct response timing and copy for known versus unknown addresses.",
+          "sent": "2025-12-01",
+          "status": "acked",
+          "severity": "medium",
+          "threadId": "",
+          "events": [
+            { "date": "2025-12-01", "by": "you", "what": "Report sent" },
+            { "date": "2025-12-01", "by": "them", "what": "Automated acknowledgement" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "globex",
+      "name": "Globex Mail",
+      "platform": "Direct",
+      "contact": "security@globex.example",
+      "note": "Responsive team. Both closed, nothing outstanding.",
+      "reports": [
+        {
+          "id": "globex-1",
+          "title": "Remote content blocking bypass via CSS background image",
+          "detail": "The privacy setting strips img tags but not CSS url() references.",
+          "sent": "2025-12-10",
+          "status": "duplicate",
+          "severity": "medium",
+          "threadId": "",
+          "events": [
+            { "date": "2025-12-10", "by": "you", "what": "Report sent" },
+            { "date": "2025-12-12", "by": "them", "what": "Well documented, but a duplicate of an earlier report" }
+          ]
+        },
+        {
+          "id": "globex-2",
+          "title": "Draft message metadata readable without authentication",
+          "detail": "Public API returns subject lines for unpublished drafts.",
+          "sent": "2025-12-14",
+          "status": "rejected",
+          "severity": "low",
+          "threadId": "",
+          "events": [
+            { "date": "2025-12-14", "by": "you", "what": "Report sent" },
+            { "date": "2025-12-16", "by": "them", "what": "Closed as intended behaviour" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "initech",
+      "name": "Initech Storage",
+      "platform": "Platform VDP",
+      "contact": "security@initech.example",
+      "note": "Blocked on you, not on them. Their intake bounced you to a platform submission you never completed.",
+      "reports": [
+        {
+          "id": "initech-1",
+          "title": "Directory traversal in the archive import path",
+          "detail": "Archive entries containing ../ are written outside the extraction root.",
+          "sent": "2026-01-08",
+          "status": "needs_action",
+          "severity": "critical",
+          "threadId": "",
+          "events": [
+            { "date": "2026-01-08", "by": "you", "what": "Report emailed" },
+            { "date": "2026-01-08", "by": "them", "what": "Auto-reply: submissions must be filed on the platform, this inbox is unmonitored" }
+          ]
+        }
+      ]
+    }
+  ]
+}

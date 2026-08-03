@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# READ THIS BEFORE YOU EDIT THIS FILE.
+#
+# data.json contains UNPATCHED, UNDISCLOSED VULNERABILITIES in real third-party
+# products, plus the identity of the researcher who found them. Committing it is
+# not a privacy slip — it is an uncoordinated 0-day disclosure against every
+# vendor listed inside, and git history cannot be truly undone.
+#
+# Never remove these rules. Never `git add -f` past them.
+# ---------------------------------------------------------------------------
+
+# Your mailbox-derived data. NEVER COMMIT.
+data.json
+data.json.bak
+state.json
+follow-up-queue.json
+escalation-queue.json
+*-queue.json
+*.bak
+
+# Google OAuth secrets. NEVER COMMIT.
+credentials.json
+token.json
+client_secret*.json
+
+# Exports the UI produces
+report-tracker-export.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

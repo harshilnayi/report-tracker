@@ -1,0 +1,7 @@
+# Only needed for the built-in Gmail sync (gmail_sync.py).
+# The tracker UI itself (server.py) runs on the Python standard library alone —
+# if you generate data.json some other way, you can skip this entirely.
+
+google-api-python-client>=2.100.0
+google-auth-oauthlib>=1.2.0
+google-auth>=2.30.0
