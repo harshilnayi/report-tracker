@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability in this tool
 
-Open a [GitHub Security Advisory](https://github.com/harshilnayi/bounty-report-tracker/security/advisories/new)
+Open a [GitHub Security Advisory](https://github.com/harshilnayi/report-tracker/security/advisories/new)
 rather than a public issue. That keeps the report private until there's a fix.
 
 Expect a first response within 7 days. This is a solo project, not a funded programme — there is no

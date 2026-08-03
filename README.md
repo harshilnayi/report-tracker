@@ -34,7 +34,7 @@ Runs entirely on your machine. Binds to `127.0.0.1`. Nothing is uploaded anywher
 ## Quick start
 
 ```bash
-git clone https://github.com/harshilnayi/bounty-report-tracker.git
+git clone https://github.com/harshilnayi/report-tracker.git
 cd report-tracker
 python server.py
 ```
